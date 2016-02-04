@@ -4,21 +4,44 @@
   <meta charset="utf-8">
   
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
-  <title>Hello World | 9I的</title>
+  <title>gulp-jshint | 9I的</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub.
-Quick">
+  <meta name="description" content="JSHint 使用
+安装
+配置文件安装
+package.json文件devDependencies下添加，
+&amp;quot;jshint&amp;quot;:&amp;quot;~2.8.0&amp;quot;
+gulp下添加
+&amp;quot;gulp-jshint&amp;quot;: &amp;quot;^1.11.2&amp;quot;,
+或者grunt下添加
+&amp;quot;grunt-contrib-jshint&amp;quot;: &amp;quot;~0.">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Hello World">
-<meta property="og:url" content="http://yoursite.com/2016/01/21/hello-world/index.html">
+<meta property="og:title" content="gulp-jshint">
+<meta property="og:url" content="http://yoursite.com/2016/01/26/gulp-jshint/index.html">
 <meta property="og:site_name" content="9I的">
-<meta property="og:description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub.
-Quick">
-<meta property="og:updated_time" content="2016-01-21T09:36:09.425Z">
+<meta property="og:description" content="JSHint 使用
+安装
+配置文件安装
+package.json文件devDependencies下添加，
+&amp;quot;jshint&amp;quot;:&amp;quot;~2.8.0&amp;quot;
+gulp下添加
+&amp;quot;gulp-jshint&amp;quot;: &amp;quot;^1.11.2&amp;quot;,
+或者grunt下添加
+&amp;quot;grunt-contrib-jshint&amp;quot;: &amp;quot;~0.">
+<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/1323902-d4ace25352190281.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/1323902-4e57daf8b154779d.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:updated_time" content="2016-01-28T01:42:49.011Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Hello World">
-<meta name="twitter:description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub.
-Quick">
+<meta name="twitter:title" content="gulp-jshint">
+<meta name="twitter:description" content="JSHint 使用
+安装
+配置文件安装
+package.json文件devDependencies下添加，
+&amp;quot;jshint&amp;quot;:&amp;quot;~2.8.0&amp;quot;
+gulp下添加
+&amp;quot;gulp-jshint&amp;quot;: &amp;quot;^1.11.2&amp;quot;,
+或者grunt下添加
+&amp;quot;grunt-contrib-jshint&amp;quot;: &amp;quot;~0.">
   
     <link rel="alternative" href="/atom.xml" title="9I的" type="application/atom+xml">
   
@@ -204,11 +227,11 @@ Quick">
 	</div>
 </nav>
 
-      <div class="body-wrap"><article id="post-hello-world" class="article article-type-post" itemscope itemprop="blogPost">
+      <div class="body-wrap"><article id="post-gulp-jshint" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
-      <a href="/blog/2016/01/21/hello-world/" class="article-date">
-  	<time datetime="2016-01-21T09:36:09.425Z" itemprop="datePublished">2016-01-21</time>
+      <a href="/blog/2016/01/26/gulp-jshint/" class="article-date">
+  	<time datetime="2016-01-26T09:22:28.000Z" itemprop="datePublished">2016-01-26</time>
 </a>
     </div>
   
@@ -221,7 +244,7 @@ Quick">
         
   
     <h1 class="article-title" itemprop="name">
-      Hello World
+      gulp-jshint
     </h1>
   
 
@@ -237,15 +260,62 @@ Quick">
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="external">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="external">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="external">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="external">GitHub</a>.</p>
-<h2 id="Quick_Start"><a href="#Quick_Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create_a_new_post"><a href="#Create_a_new_post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="external">Writing</a></p>
-<h3 id="Run_server"><a href="#Run_server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="external">Server</a></p>
-<h3 id="Generate_static_files"><a href="#Generate_static_files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="external">Generating</a></p>
-<h3 id="Deploy_to_remote_sites"><a href="#Deploy_to_remote_sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="external">Deployment</a></p>
+        <h2 id="JSHint__u4F7F_u7528"><a href="#JSHint__u4F7F_u7528" class="headerlink" title="JSHint 使用"></a>JSHint 使用</h2><hr>
+<h3 id="u5B89_u88C5"><a href="#u5B89_u88C5" class="headerlink" title="安装"></a>安装</h3><ul>
+<li><p>配置文件安装</p>
+<p>package.json文件devDependencies下添加，</p>
+<pre><code>&quot;jshint&quot;:&quot;~2.8.0&quot;
+</code></pre><p>gulp下添加</p>
+<pre><code>&quot;gulp-jshint&quot;: &quot;^1.11.2&quot;,
+</code></pre><p>或者grunt下添加</p>
+<pre><code>&quot;grunt-contrib-jshint&quot;: &quot;~0.11.2&quot;,
+</code></pre><p>然后使用npm命令</p>
+<pre><code>npm install -g
+</code></pre><p>带<strong>-g</strong>是全局安装</p>
+</li>
+</ul>
+<ul>
+<li>单独安装<pre><code>npm install jshint -g
+</code></pre>或者<pre><code>npm install --save-dev jshint
+</code></pre><strong>–save</strong>保存到配置文件package.json的devDependencies里面<h3 id="u4F7F_u7528"><a href="#u4F7F_u7528" class="headerlink" title="使用"></a>使用</h3></li>
+<li><p>单独使用</p>
+<pre><code>jshint myfile.js
+</code></pre><p>如下图：</p>
+<p><img src="http://upload-images.jianshu.io/upload_images/1323902-d4ace25352190281.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="Paste_Image.png"></p>
+</li>
+<li>gulp-jshint<pre><code>var gulp = require(&apos;gulp&apos;),
+gulpLoadPlugins = require(&apos;gulp-load-plugins&apos;),
+plugins = gulpLoadPlugins();
+</code></pre>定义一个名为jshint的任务<pre><code>gulp.task(&apos;jshint&apos;, function () {
+           return gulp.src()
+              .pipe(plugins.jshint())
+              .pipe(plugins.jshint.reporter(&apos;default&apos;))
+              .pipe(plugins.jshint.reporter(&apos;fail&apos;));
+</code></pre>然后执行单个任务<pre><code>gulp jshint
+</code></pre>reporter会在控制台输出一些jshint的日志。<br>执行效果如下：<br><img src="http://upload-images.jianshu.io/upload_images/1323902-4e57daf8b154779d.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="Paste_Image.png"></li>
+<li>grunt-contrib-jshint<ul>
+<li>初始化配置<br>   grunt.initConfig({<pre><code>.......
+ jshint: {
+    all: {
+         src:你的文件（一般是模糊匹配）,
+         options: {
+            jshintrc: true,
+            node: true,
+            mocha: true,
+            jasmine: true
+         }
+       }
+   },
+</code></pre>   …….<pre><code>};
+</code></pre></li>
+<li>注册任务<pre><code>grunt.loadNpmTasks(&apos;grunt-contrib-jshint&apos;);
+grunt.registerTask(&apos;jshint&apos;, &apos;start the jshint&apos;,funciton(){});
+</code></pre></li>
+<li>执行<pre><code>grunt jshint
+</code></pre><strong>grunt 可以参考这篇博客</strong><a href="http://www.cnblogs.com/haogj/p/4781677.html" target="_blank" rel="external">grunt-contrib-jshint</a><br><strong>JSHint具体配置可以参考</strong><a href="http://www.jianshu.com/p/4cb23f9e19d3" target="_blank" rel="external">JSHint配置说明</a></li>
+</ul>
+</li>
+</ul>
 
       
     </div>
@@ -255,15 +325,20 @@ Quick">
     
 <nav id="article-nav">
   
-    <a href="/blog/2016/01/26/gulp-jshint/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/blog/2016/02/04/gulp-test/" id="article-nav-newer" class="article-nav-link-wrap">
       <strong class="article-nav-caption"><</strong>
       <div class="article-nav-title">
         
-          gulp-jshint
+          gulp-test
         
       </div>
     </a>
   
+  
+    <a href="/blog/2016/01/21/hello-world/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">Hello World</div>
+      <strong class="article-nav-caption">></strong>
+    </a>
   
 </nav>
 
@@ -296,7 +371,7 @@ Quick">
 
 <div class="duoshuo">
 	<!-- 多说评论框 start -->
-	<div class="ds-thread" data-thread-key="hello-world" data-title="Hello World" data-url="http://yoursite.com/blog/2016/01/21/hello-world/"></div>
+	<div class="ds-thread" data-thread-key="gulp-jshint" data-title="gulp-jshint" data-url="http://yoursite.com/blog/2016/01/26/gulp-jshint/"></div>
 	<!-- 多说评论框 end -->
 	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
 	<script type="text/javascript">

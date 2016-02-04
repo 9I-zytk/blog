@@ -202,6 +202,166 @@
 
       <div class="body-wrap">
   
+    <article id="post-gulp-test" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/blog/2016/02/04/gulp-test/" class="article-date">
+  	<time datetime="2016-02-04T03:13:03.000Z" itemprop="datePublished">2016-02-04</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/blog/2016/02/04/gulp-test/">gulp-test</a>
+    </h1>
+  
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
+  
+    <article id="post-gulp-jshint" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/blog/2016/01/26/gulp-jshint/" class="article-date">
+  	<time datetime="2016-01-26T09:22:28.000Z" itemprop="datePublished">2016-01-26</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/blog/2016/01/26/gulp-jshint/">gulp-jshint</a>
+    </h1>
+  
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="JSHint__u4F7F_u7528"><a href="#JSHint__u4F7F_u7528" class="headerlink" title="JSHint 使用"></a>JSHint 使用</h2><hr>
+<h3 id="u5B89_u88C5"><a href="#u5B89_u88C5" class="headerlink" title="安装"></a>安装</h3><ul>
+<li><p>配置文件安装</p>
+<p>package.json文件devDependencies下添加，</p>
+<pre><code>&quot;jshint&quot;:&quot;~2.8.0&quot;
+</code></pre><p>gulp下添加</p>
+<pre><code>&quot;gulp-jshint&quot;: &quot;^1.11.2&quot;,
+</code></pre><p>或者grunt下添加</p>
+<pre><code>&quot;grunt-contrib-jshint&quot;: &quot;~0.11.2&quot;,
+</code></pre><p>然后使用npm命令</p>
+<pre><code>npm install -g
+</code></pre><p>带<strong>-g</strong>是全局安装</p>
+</li>
+</ul>
+<ul>
+<li>单独安装<pre><code>npm install jshint -g
+</code></pre>或者<pre><code>npm install --save-dev jshint
+</code></pre><strong>–save</strong>保存到配置文件package.json的devDependencies里面<h3 id="u4F7F_u7528"><a href="#u4F7F_u7528" class="headerlink" title="使用"></a>使用</h3></li>
+<li><p>单独使用</p>
+<pre><code>jshint myfile.js
+</code></pre><p>如下图：</p>
+<p><img src="http://upload-images.jianshu.io/upload_images/1323902-d4ace25352190281.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="Paste_Image.png"></p>
+</li>
+<li>gulp-jshint<pre><code>var gulp = require(&apos;gulp&apos;),
+gulpLoadPlugins = require(&apos;gulp-load-plugins&apos;),
+plugins = gulpLoadPlugins();
+</code></pre>定义一个名为jshint的任务<pre><code>gulp.task(&apos;jshint&apos;, function () {
+           return gulp.src()
+              .pipe(plugins.jshint())
+              .pipe(plugins.jshint.reporter(&apos;default&apos;))
+              .pipe(plugins.jshint.reporter(&apos;fail&apos;));
+</code></pre>然后执行单个任务<pre><code>gulp jshint
+</code></pre>reporter会在控制台输出一些jshint的日志。<br>执行效果如下：<br><img src="http://upload-images.jianshu.io/upload_images/1323902-4e57daf8b154779d.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="Paste_Image.png"></li>
+<li>grunt-contrib-jshint<ul>
+<li>初始化配置<br>   grunt.initConfig({<pre><code>.......
+ jshint: {
+    all: {
+         src:你的文件（一般是模糊匹配）,
+         options: {
+            jshintrc: true,
+            node: true,
+            mocha: true,
+            jasmine: true
+         }
+       }
+   },
+</code></pre>   …….<pre><code>};
+</code></pre></li>
+<li>注册任务<pre><code>grunt.loadNpmTasks(&apos;grunt-contrib-jshint&apos;);
+grunt.registerTask(&apos;jshint&apos;, &apos;start the jshint&apos;,funciton(){});
+</code></pre></li>
+<li>执行<pre><code>grunt jshint
+</code></pre><strong>grunt 可以参考这篇博客</strong><a href="http://www.cnblogs.com/haogj/p/4781677.html" target="_blank" rel="external">grunt-contrib-jshint</a><br><strong>JSHint具体配置可以参考</strong><a href="http://www.jianshu.com/p/4cb23f9e19d3" target="_blank" rel="external">JSHint配置说明</a></li>
+</ul>
+</li>
+</ul>
+
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
+  
     <article id="post-hello-world" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
