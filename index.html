@@ -4,19 +4,19 @@
   <meta charset="utf-8">
   
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
-  <title>9I的</title>
+  <title>WEB FOR 9I-zytk</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta name="description" content="没事写点东西">
 <meta property="og:type" content="website">
-<meta property="og:title" content="9I的">
+<meta property="og:title" content="WEB FOR 9I-zytk">
 <meta property="og:url" content="http://yoursite.com/index.html">
-<meta property="og:site_name" content="9I的">
+<meta property="og:site_name" content="WEB FOR 9I-zytk">
 <meta property="og:description" content="没事写点东西">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="9I的">
+<meta name="twitter:title" content="WEB FOR 9I-zytk">
 <meta name="twitter:description" content="没事写点东西">
   
-    <link rel="alternative" href="/atom.xml" title="9I的" type="application/atom+xml">
+    <link rel="alternative" href="/atom.xml" title="WEB FOR 9I-zytk" type="application/atom+xml">
   
   
     <link rel="icon" href="/favicon.png">
@@ -41,7 +41,7 @@
 		</hgroup>
 
 		
-		<p class="header-subtitle">随笔</p>
+		<p class="header-subtitle">伪全栈的前端</p>
 		
 
 		
@@ -171,7 +171,7 @@
 			  <h1 class="header-author">9I</h1>
 			</hgroup>
 			
-			<p class="header-subtitle">随笔</p>
+			<p class="header-subtitle">伪全栈的前端</p>
 			
 			<nav class="header-menu">
 				<ul>
@@ -280,7 +280,7 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h3 id="u524D_u8A00"><a href="#u524D_u8A00" class="headerlink" title="前言"></a>前言</h3><p> 　　本文默认你已经安装好node环境，并且熟悉node命令，和window cd命令</p>
+        <h3 id="u524D_u8A00"><a href="#u524D_u8A00" class="headerlink" title="前言"></a>前言</h3><p> 　　本文默认你已经安装好node环境，并且熟悉node命令，和window cd命令.</p>
 <hr>
 <h2 id="gulp_u5B89_u88C5"><a href="#gulp_u5B89_u88C5" class="headerlink" title="gulp安装"></a>gulp安装</h2><p> 　　NPM是基于命令行的node包管理工具，它可以将node的程序模块安装到项目中,<br> 我们利用npm来安装gulp.</p>
 <ul>
@@ -290,218 +290,15 @@
 </code></pre>或者<pre><code>gulp -v
 </code></pre></li>
 <li>安装到项目本地<br>先CD到你的项目根目录<pre><code>npm install gulp --save-dev
-</code></pre><font color="red">–save-dev</font>保存gulp到项目依赖文件package.json的devDependencies里面。</li>
+</code></pre><font color='red'>–save-dev</font>保存gulp到项目依赖文件package.json的devDependencies里面。</li>
 <li>安装错误处理<ul>
 <li>连不上服务器。由于npm大多包在github或者国外网站上，如果网络不好（铁通/移动长宽等），访问不了，还有可能被墙了（你懂得）。这时候你可以使用淘宝镜像：<pre><code>npm install gulp -g --registry=https://registry.npm.taobao.org
 </code></pre>你也可以使用淘宝的命令CNPM<pre><code>npm install -g cnpm --registry=https://registry.npm.taobao.org
 cnpm install gulp -g
-</code></pre>有些包可能淘宝上也没，这时候你需要翻墙了，请自备梯子。<br>淘宝镜像具体教程：<a href="http://npm.taobao.org/" target="_blank" rel="external">淘宝镜像传送门</a></li>
+</code></pre>有些包可能淘宝上也没，这时候你需要翻墙了，请自备梯子。<br>淘宝镜像具体教程：<a href="http://npm.taobao.org/">淘宝镜像传送门</a></li>
 <li>权限不够。<br> wiondows请使用管理员模式打开CMD,linux下命令前面加 <code>sudo</code>,<pre><code>sudo npm install gulp -g
 </code></pre></li>
-<li>windows下莫名错误。<br>如果网络良好，还是安装出现莫名其妙错误，那么你就应该换Git安装了。<br>window平台下建议使用git安装。</li>
-</ul>
-</li>
-</ul>
-<hr>
-<h3 id="gulp__u4F7F_u7528"><a href="#gulp__u4F7F_u7528" class="headerlink" title="gulp 使用"></a>gulp 使用</h3><p>　　在你的项目根目录下创建文件gulpfile.js文件：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">var gulp = require(&#39;gulp&#39;);&#10;gulp.task(&#39;default&#39;, function() &#123;&#10;     // &#23558;&#20320;&#30340;&#40664;&#35748;&#30340;&#20219;&#21153;&#20195;&#30721;&#25918;&#22312;&#36825;&#10;  &#125;);</span><br></pre></td></tr></table></figure></p>
-<p>运行gulp:</p>
-<pre><code>$ gulp
-</code></pre><p>　　默认的名为 default 的任务（task）将会被运行，在这里由于没有任何代码，所以这个任务并未做任何事情。<br>　　想要单独执行特定的任务（task），请输入 gulp <task> ，上面等价于：  </task></p>
-<pre><code>$ gulp default
-</code></pre><h3 id="gulp_API_u7B80_u4ECB"><a href="#gulp_API_u7B80_u4ECB" class="headerlink" title="gulp API简介"></a>gulp API简介</h3><ul>
-<li>gulp.src（gobs[, options])<br> 输出符合匹配条件的文件，将返回一个<a href="https://github.com/wearefractal/vinyl-fs" target="_blank" rel="external">Vinyl files</a> 的 <a href="http://nodejs.org/api/stream.html" target="_blank" rel="external">stream</a> 它可以被 <a href="http://nodejs.org/api/stream.html#stream_readable_pipe_destination_options" target="_blank" rel="external">piped</a> 到别的插件中。<a href="http://www.gulpjs.com.cn/docs/api/" target="_blank" rel="external">详细查看</a><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#160;&#160;&#160;&#160;   gulp.src(&#39;src/js/*.js&#39;) //&#27169;&#31946;&#21305;&#37197;src/js&#25991;&#20214;&#22841;&#19979;&#25152;&#26377;js&#25991;&#20214;&#10;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;  .pipe( concat(&#39;app.js&#39;))//&#10;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;  .pipe(gulp.dest(&#39;pub/dist/js&#39;));//&#21512;&#24182;&#21518;&#25991;&#20214;&#36335;&#24452;</span><br></pre></td></tr></table></figure>
-</li>
-</ul>
-<ul>
-<li><p>gulp.dest(path[, options])<br>　　能被 pipe 进来，并且将会写文件。并且重新输出所有数据，因此你可以将它 pipe 到多个文件夹。如果某文件夹不存在，将会自动创建它。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">gulp.src(&#39;./client/templates/*.jade&#39;)&#10;   .pipe(jade())&#10;   .pipe(gulp.dest(&#39;./build/templates&#39;))&#10;   .pipe(minify())&#10;   .pipe(gulp.dest(&#39;./build/minified_templates&#39;));</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>gulp.task(name[, deps], fn)<br>定义一个使用 <a href="https://github.com/robrich/orchestrator" target="_blank" rel="external">Orchestrator</a> 实现的任务（task）。</p>
-<ul>
-<li>name<br>任务的名字，如果你需要在命令行中运行你的某些任务，那么，请不要在名字中使用空格。</li>
-<li>deps<br>类型： Array<br>一个包含任务列表的数组，这些任务会在你当前任务运行之前完成。<br><strong>注意：</strong> 你的任务是否在这些前置依赖的任务完成之前运行了？请一定要确保你所依赖的任务列表中的任务都使用了正确的异步执行方式：使用一个 callback，或者返回一个 promise 或 stream。</li>
-<li>fn<br>该函数定义任务所要执行的一些操作。通常来说，它会是这种形式：<br>   gulp.src().pipe(someplugin())<br>返回一个 stream或者promise<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">gulp.task(&#39;mytask&#39;, [&#39;array&#39;, &#39;of&#39;, &#39;task&#39;, &#39;names&#39;], function() &#123;&#10;  return gulp.src(&#39;client/**/*.js&#39;)&#10;             .pipe(minify())&#10;             .pipe(gulp.dest(&#39;build&#39;));&#10;&#125;);</span><br></pre></td></tr></table></figure>
-</li>
-</ul>
-</li>
-</ul>
-<p>接受一个callback<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">// &#22312; shell &#20013;&#25191;&#34892;&#19968;&#20010;&#21629;&#20196;&#10;var exec = require(&#39;child_process&#39;).exec;&#10;gulp.task(&#39;jekyll&#39;, function(cb) &#123;&#10;     // &#32534;&#35793; Jekyll&#10;    exec(&#39;jekyll build&#39;, function(err) &#123;&#10;            if (err) return cb(err); // &#36820;&#22238; error&#10;           cb(); // &#23436;&#25104; task&#10;     &#125;);&#10;&#125;);</span><br></pre></td></tr></table></figure></p>
-<p><strong>注意：</strong> 默认的，task 将以最大的并发数执行，也就是说，gulp 会一次性运行所有的 task 并且不做任何等待。如果你想要创建一个序列化的 task 队列，并以特定的顺序执行，你需要做两件事：<br>给出一个提示，来告知 task 什么时候执行完毕，<br>并且再给出一个提示，来告知一个 task 依赖另一个 task 的完成。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">var gulp = require(&#39;gulp&#39;);&#10;// &#36820;&#22238;&#19968;&#20010; callback&#65292;&#22240;&#27492;&#31995;&#32479;&#21487;&#20197;&#30693;&#36947;&#23427;&#20160;&#20040;&#26102;&#20505;&#23436;&#25104;&#10;gulp.task(&#39;one&#39;, function(cb) &#123;&#10;// &#20570;&#19968;&#20123;&#20107; -- &#24322;&#27493;&#30340;&#25110;&#32773;&#20854;&#20182;&#30340;&#10;     cb(err); // &#22914;&#26524; err &#19981;&#26159; null /undefined&#65292;&#21017;&#20250;&#20572;&#27490;&#25191;&#34892;&#65292;&#27880;&#24847;&#65292;&#36825;&#26679;&#20195;&#34920;&#25191;&#34892;&#22833;&#36133;&#20102;&#10;&#125;);&#10;// &#23450;&#20041;&#19968;&#20010;&#25152;&#20381;&#36182;&#30340; task &#24517;&#39035;&#22312;&#36825;&#20010; task &#25191;&#34892;&#20043;&#21069;&#23436;&#25104;&#10;gulp.task(&#39;two&#39;, [&#39;one&#39;], function() &#123;&#10; // &#39;one&#39; &#23436;&#25104;&#21518;&#10;&#125;);&#10;gulp.task(&#39;default&#39;, [&#39;one&#39;, &#39;two&#39;]);</span><br></pre></td></tr></table></figure></p>
-<ul>
-<li>gulp.watch(glob [, opts], tasks) 或 gulp.watch(glob [, opts, cb])<br>监视文件，并且可以在文件发生改动时候做一些事情。它总会返回一个 EventEmitter 来emit change事件。<br>示例：<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">gulp.watch(&#39;js/**/*.js&#39;, function(event) &#123;&#10;console.log(&#39;File &#39; + event.path + &#39; was &#39; + event.type + &#39;, running tasks...&#39;);&#10;&#125;);</span><br></pre></td></tr></table></figure>
-</li>
-</ul>
-<p>文件变动后执行一个或者多个task的。有js文件变动，执行jshint验证任务再刷新浏览器：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">gulp.watch(&#39;js/**/*.js&#39;, [&#39;jshint&#39;]).on(&#39;change&#39;, plugins.livereload.changed);</span><br></pre></td></tr></table></figure></p>
-<ul>
-<li>gulp.src通配符匹配<br>foo.js指明特定某个文件<br><code>*.js</code>匹配当前目录下的所有js文件,不指名扩展名则匹配所有类型<br><code>*/*.js</code>匹配所有<code>**</code>第一层子文件夹<code>**</code>的js文件,第二层请用<code>*/*/.js</code><br><code>**/*.js</code>匹配<code>**</code>所有文件夹层次<code>**</code>下的js文件, 包括当前目录<br><code>?</code>匹配文件路径中的一个字符(不会匹配路径分隔符)<br><code>[...]</code>匹配方括号中出现的字符中的任意一个，当方括号中第一个字符为<code>^</code>或<code>!</code>时，则表示不匹配方括号中出现的其他字符中的任意一个.<br><code>!</code>匹配任何与括号中给定的任一模式都不匹配的<br>下面以一系列例子来加深理解<pre><code>*能匹配 a.js,x.y,abc,abc/,但不能匹配a/b.js
-*.*能匹配 a.js,style.css,a.b,x.y
-*/*/*.js能匹配 a/b/c.js,x/y/z.js,不能匹配a/b.js,a/b/c/d.js
-**能匹配 abc,a/b.js,a/b/c.js,x/y/z,x/y/z/a.b,能用来匹配所有的目录和文件
-**/*.js 能匹配 foo.js,a/foo.js,a/b/foo.js,a/b/c/foo.js
-a/**/z能匹配 a/z,a/b/z,a/b/c/z,a/d/g/h/j/k/z
-a/**b/z 能匹配 a/b/z,a/sb/z,但不能匹配a/x/sb/z,因为只有单**单独出现才能匹配多级目录
-?.js 能匹配 a.js,b.js,c.js
-a??能匹配 a.b,abc,但不能匹配ab/,因为它不会匹配路径分隔符
-[xyz].js只能匹配 x.js,y.js,z.js,不会匹配xy.js,xyz.js等,整个中括号只代表一个字符
-[^xyz].js能匹配 a.js,b.js,c.js等,不能匹配x.js,y.js,z.js
-</code></pre><ul>
-<li>项目实例，项目结构如下<br><img src="http://upload-images.jianshu.io/upload_images/1323902-625eca59244b0086.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="Paste_Image.png"><br><code>&#39;modules/*/client/css/**/*.scss&#39;</code> 能匹配blog,core，manage三个目录下client/css目录下任意.scss文件，不管client/css/下有几层;<br><code>[&#39;server.js&#39;, &#39;config/**/*.js&#39;, &#39;modules/*/server/**/*.js&#39;]</code> 匹配根目录下server.js,config目录下所有js文件，modules所有子目录下的server文件夹所有js文件。<br><code>[&#39;modules/!(core)/server/routes/**/*.js&#39;, &#39;modules/core/server/routes/**/*.js&#39;]</code>,匹配module下除core之外的子目录下<code>server/route</code>下所有js文件。<br><code>[&#39;server/routes/**/*.js&#39;,&#39;!./server/routes/app.js&#39;]</code>这种是无法排除<code>routes/app.js</code>，因为前后匹配表达式不一直，正确应为<code>[&#39;server/routes/**/*.js&#39;, &#39;!server/routes/app.js&#39;]</code>.</li>
-</ul>
-</li>
-<li>如果你想了解更多请参考<a href="http://sentsin.com/web/861.html" target="_blank" rel="external">gulp进阶传送门</a></li>
-</ul>
-<p>　</p>
-<h2 id="gulp_u4F7F_u7528"><a href="#gulp_u4F7F_u7528" class="headerlink" title="gulp使用"></a>gulp使用</h2><h4 id="3-1_gulp_u4E4B_u6587_u4EF6_u5408_u5E76_u2013gulp-concat"><a href="#3-1_gulp_u4E4B_u6587_u4EF6_u5408_u5E76_u2013gulp-concat" class="headerlink" title="3.1 gulp之文件合并–gulp-concat"></a>3.1 gulp之文件合并–gulp-concat</h4><p>为了减少网络请求，通常会对文件夹进行合并。</p>
-<ul>
-<li>安装<br>　　gulp-concat插件安装和gulp安装雷同，不再赘述。</li>
-<li><p>基本使用</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">var gulp = require(&#39;gulp&#39;),&#10;&#160;&#160;&#160;&#160;concat = require(&#39;gulp-concat&#39;);//&#24341;&#20837;gulp&#21450;&#25554;&#20214;gulp-concat&#10;    gulp.task(&#39;concat&#39;, function () &#123;//&#23450;&#20041;&#20219;&#21153;concat&#10;&#160;&#160;&#160;&#160;   gulp.src(&#39;src/js/*.js&#39;) //&#27169;&#31946;&#21305;&#37197;src/js&#25991;&#20214;&#22841;&#19979;&#25152;&#26377;js&#25991;&#20214;&#10;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;  .pipe(concat(&#39;app.js&#39;))//&#21512;&#24182;&#21518;&#30340;&#25991;&#20214;&#21517;&#10;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; .pipe(gulp.dest(&#39;pub/dist/js&#39;));//&#21512;&#24182;&#21518;&#25991;&#20214;&#36335;&#24452;&#10;   &#125;);</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>执行任务</p>
-<pre><code>gulp concat
-</code></pre></li>
-<li>结果</li>
-</ul>
-<p><img src="http://upload-images.jianshu.io/upload_images/1323902-f61e0aa843f5b59d.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="Paste_Image.png"></p>
-<p>上图为合并压缩重命名后的文件名。下面会一一讲到。</p>
-<h4 id="3-2_gulp_u4E4Bjs_u6587_u4EF6_u538B_u7F29gulp-uglify"><a href="#3-2_gulp_u4E4Bjs_u6587_u4EF6_u538B_u7F29gulp-uglify" class="headerlink" title="3.2 gulp之js文件压缩gulp-uglify"></a>3.2 gulp之js文件压缩gulp-uglify</h4><p>为了减少文件大小，通常会对文件进行压缩处理。</p>
-<ul>
-<li>安装<br>　　gulp-uglify插件安装和gulp安装雷同，不再赘述。</li>
-<li>基本使用<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">var gulp = require(&#39;gulp&#39;),&#10;&#160;&#160;&#160;&#160;uglify = require(&#39;gulp-uglify&#39;);&#10;&#160;&#10;   gulp.task(&#39;min&#39;, function () &#123;&#10;&#160;&#160;&#160;    gulp.src([&#39;src/js/index.js&#39;,&#39;src/js/app.js&#39;]) //&#22810;&#20010;&#25991;&#20214;&#20197;&#25968;&#32452;&#24418;&#24335;&#25110;&#27169;&#31946;&#21305;&#37197;&#20256;&#20837;.&#10;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;.pipe(uglify(&#123;&#10;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;mangle: true,//&#31867;&#22411;&#65306;Boolean &#40664;&#35748;&#65306;true &#26159;&#21542;&#20462;&#25913;&#21464;&#37327;&#21517;&#10;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;compress: true//&#31867;&#22411;&#65306;Boolean &#40664;&#35748;&#65306;true &#26159;&#21542;&#23436;&#20840;&#21387;&#32553;&#10;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#125;))&#10;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;.pipe(gulp.dest(&#39;pub/dist/js&#39;));//&#21387;&#32553;&#21518;&#23384;&#25918;&#36335;&#21170;&#10;&#125;);</span><br></pre></td></tr></table></figure>
-</li>
-</ul>
-<p>uglify<a href="https://github.com/terinjokes/gulp-uglify#user-content-options" target="_blank" rel="external">具体参数查看</a></p>
-<ul>
-<li>执行任务<pre><code>gulp min
-</code></pre>执行成功后可以看到pub/dist/js目录下生成了新的文件<h4 id="3-3_gulp_u4E4Bcss_u6587_u4EF6_u538B_u7F29gulp-minify-css"><a href="#3-3_gulp_u4E4Bcss_u6587_u4EF6_u538B_u7F29gulp-minify-css" class="headerlink" title="3.3 gulp之css文件压缩gulp-minify-css"></a>3.3 gulp之css文件压缩gulp-minify-css</h4></li>
-<li><p>基本使用</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">var gulp = require(&#39;gulp&#39;),&#10;&#160;&#160;&#160;&#160;cssmin = require(&#39;gulp-minify-css&#39;);&#10;gulp.task(&#39;Cssmin&#39;, function () &#123;&#10;&#160;&#160;&#160;&#160;gulp.src(&#39;src/css/*.css&#39;)&#10;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;.pipe(cssmin())&#10;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;.pipe(gulp.dest(&#39;dist/css&#39;));&#10;&#125;);</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>配合其他插件使用</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">var gulpLoadPlugins = require(&#39;gulp-load-plugins&#39;),&#10;      cssver = require(&#39;gulp-make-css-url-version&#39;),&#10;     plugins = gulpLoadPlugins();//load-plugins&#19968;&#27425;&#21152;&#36733;&#25152;&#26377;&#20381;&#36182;&#30340;gulp&#25554;&#20214;&#10;  gulp.task(&#39;Cssmin&#39;, function () &#123;&#10;     return gulp.src(&#39;modules/*/client/css/*.css&#39;)&#10;            .pipe(cssver()) //&#32473;css&#25991;&#20214;&#37324;&#24341;&#29992;&#25991;&#20214;&#21152;&#29256;&#26412;&#21495;&#65288;&#25991;&#20214;MD5&#65289;&#10;      &#160;&#160;&#160;&#160;&#160;&#160;.pipe(cssmin(&#123;&#10;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;   advanced: false,//&#31867;&#22411;&#65306;Boolean &#40664;&#35748;&#65306;true [&#26159;&#21542;&#24320;&#21551;&#39640;&#32423;&#20248;&#21270;&#65288;&#21512;&#24182;&#36873;&#25321;&#22120;&#31561;&#65289;]&#10;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;   compatibility: &#39;ie7&#39;,//&#31867;&#22411;&#65306;String &#40664;&#35748;&#65306;&#39;&#39;or&#39;*&#39; [&#21551;&#29992;&#20860;&#23481;&#27169;&#24335;&#65307; &#39;ie7&#39;&#65306;IE7&#20860;&#23481;&#27169;&#24335;&#65292;&#39;ie8&#39;&#65306;IE8&#20860;&#23481;&#27169;&#24335;&#65292;&#39;*&#39;&#65306;IE9+&#20860;&#23481;&#27169;&#24335;]&#10;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;   &#160;keepBreaks: true//&#31867;&#22411;&#65306;Boolean &#40664;&#35748;&#65306;false [&#26159;&#21542;&#20445;&#30041;&#25442;&#34892;]&#10;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#125;))&#10;      .pipe(gulp.dest(&#39;public/dist&#39;));&#10;   &#125;);</span><br></pre></td></tr></table></figure>
-</li>
-</ul>
-<p>插件<strong>gulp-make-css-url-version</strong> 给css文件里引用url加版本号（根据引用文件的md5生产版本号）<br>      .class(background:url(../img/1.jpg?v=je82o9djZTYljusqe%2B3D%4B5A) no-repeat)</p>
-<ul>
-<li>执行任务<pre><code>gulp Cssmin
-</code></pre></li>
-</ul>
-<h4 id="3-4_gulp_u4E4B_u56FE_u7247_u538B_u7F29gulp-imagemin"><a href="#3-4_gulp_u4E4B_u56FE_u7247_u538B_u7F29gulp-imagemin" class="headerlink" title="3.4 gulp之图片压缩gulp-imagemin"></a>3.4 gulp之图片压缩gulp-imagemin</h4><p>压缩图片文件（包括PNG、JPEG、GIF和SVG图片）</p>
-<ul>
-<li><p>基本使用</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">var gulp = require(&#39;gulp&#39;),&#10;&#160;&#160;&#160;&#160;imagemin = require(&#39;gulp-imagemin&#39;);&#160;&#10;   gulp.task(&#39;Imagemin&#39;, function () &#123;&#10;&#160;&#160;&#160;&#160;    gulp.src(&#39;src/img/*.&#123;png,jpg,gif,ico&#125;&#39;)&#10;&#160;&#160;&#160;&#160;&#160;&#160;&#160;   &#160;.pipe(imagemin())&#10;&#160;&#160;&#160;&#160;&#160;&#160;  &#160; &#160;.pipe(gulp.dest(&#39;dist/img&#39;));&#10;    &#125;);</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>带参数，配合其他插件，<a href="https://github.com/sindresorhus/gulp-imagemin#user-content-options" target="_blank" rel="external">具体参数查看</a></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">var gulp = require(&#39;gulp&#39;),&#10;&#160;&#160;&#160;&#160;imagemin = require(&#39;gulp-imagemin&#39;);&#10;  gulp.task(&#39;Imagemin&#39;, function () &#123;&#10;&#160;&#160;&#160;&#160;   gulp.src(&#39;src/img/*.&#123;png,jpg,gif,ico&#125;&#39;)&#10;&#160;&#160;&#160;&#160;&#160;&#160;&#160;  &#160;.pipe(imagemin(&#123;&#10;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;optimizationLevel: 5, //&#31867;&#22411;&#65306;Number&#160;&#160;&#40664;&#35748;&#65306;3&#160;&#160;&#21462;&#20540;&#33539;&#22260;&#65306;0-7&#65288;&#20248;&#21270;&#31561;&#32423;&#65289;&#10;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;progressive: true, //&#31867;&#22411;&#65306;Boolean &#40664;&#35748;&#65306;false &#26080;&#25439;&#21387;&#32553;jpg&#22270;&#29255;&#10;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;interlaced: true, //&#31867;&#22411;&#65306;Boolean &#40664;&#35748;&#65306;false &#38548;&#34892;&#25195;&#25551;gif&#36827;&#34892;&#28210;&#26579;&#10;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;multipass: true //&#31867;&#22411;&#65306;Boolean &#40664;&#35748;&#65306;false &#22810;&#27425;&#20248;&#21270;svg&#30452;&#21040;&#23436;&#20840;&#20248;&#21270;&#10;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#125;))&#10;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;.pipe(gulp.dest(&#39;public/dist&#39;));&#10;&#125;);</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>由于有些图片比较大，所以可以进行深度压缩，和只压缩修改的图片，没修改就从缓存读取</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">var gulp = require(&#39;gulp&#39;),&#10;    gulpLoadPlugins = require(&#39;gulp-load-plugins&#39;), //&#33258;&#21160;&#21152;&#36733;&#25554;&#20214;&#10;&#160;&#160;&#160;&#160;pngquant = require(&#39;imagemin-pngquant&#39;),//&#28145;&#24230;&#21387;&#32553;&#25554;&#20214;&#10;    plugins = gulpLoadPlugins(); //&#23454;&#20363;&#21270;&#10;  gulp.task(&#39;testImagemin&#39;, function () &#123;&#10;&#160;&#160;&#160;&#160;gulp.src(&#39;src/img/*.&#123;png,jpg,gif,ico&#125;&#39;)&#10;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;.pipe(plugins.cache(plugins.imagemin(&#123;&#10;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;progressive: true,&#10;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;svgoPlugins: [&#123;removeViewBox: false&#125;],//&#19981;&#35201;&#31227;&#38500;svg&#30340;viewbox&#23646;&#24615;&#10;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;use: [pngquant()] //&#20351;&#29992;pngquant &#25554;&#20214;&#28145;&#24230;&#21387;&#32553;&#10;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#125;)))&#10;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;.pipe(gulp.dest(&#39;dist/img&#39;));&#10;&#125;);</span><br></pre></td></tr></table></figure>
-</li>
-</ul>
-<h4 id="3-5__u81EA_u52A8_u52A0_u8F7D_u63D2_u4EF6gulp-load-plugins"><a href="#3-5__u81EA_u52A8_u52A0_u8F7D_u63D2_u4EF6gulp-load-plugins" class="headerlink" title="3.5 自动加载插件gulp-load-plugins"></a>3.5 自动加载插件<a href="https://www.npmjs.com/package/gulp-load-plugins" target="_blank" rel="external">gulp-load-plugins</a></h4><p>上面很多例子都用到这个插件。由于我们项目中有时候会用到很多插件，如果都用require进来，我们得写很多行require代码，虽然这样没问题，但是会显得很冗长，所以gulp-load-plugins应运而生，帮我们加载这些插件。</p>
-<ul>
-<li><p>基本使用<br>假定我们项目有如下插件：<br><img src="http://upload-images.jianshu.io/upload_images/1323902-eccbd0dc2bc0be9f.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="Paste_Image.png"><br>我们可以通过一行代码就加载进来</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">var gulp = require(&#39;gulp&#39;),&#10;plugins = require(&#39;gulp-load-plugins&#39;)();</span><br></pre></td></tr></table></figure>
-<ul>
-<li>gulp-load-plugins命令规则为驼峰命名，比如我们引用gulp-rename就可以plugins.rename替代，去掉gulp-前缀，再使用驼峰命名。</li>
-</ul>
-<ul>
-<li><strong>注意：</strong> <strong>gulp-load-plugins</strong>在我们需要用到某个插件的时候，才去加载那个插件，并不是一开始就全部加载进来。因为gulp-load-plugins是依赖package.json文件来加载插件的，所以请确保你需要的插件已经加入package.json文件并已经安装完毕。</li>
-</ul>
-</li>
-</ul>
-<h4 id="3-6_gulp_u4E4BHTML_u6587_u4EF6_u538B_u7F29gulp-htmlmin"><a href="#3-6_gulp_u4E4BHTML_u6587_u4EF6_u538B_u7F29gulp-htmlmin" class="headerlink" title="3.6 gulp之HTML文件压缩gulp-htmlmin"></a>3.6 gulp之HTML文件压缩gulp-htmlmin</h4><p>可以压缩页面javascript、css，去除页面空格、注释，删除多余属性等操作</p>
-<ul>
-<li>基本用法<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">var gulp = require(&#39;gulp&#39;),&#10;     plugins = require(&#39;gulp-load-plugins&#39;)(); //&#33258;&#21160;&#25554;&#20214;&#24341;&#29992;&#10;&#160;&#160;&#160;&#160; //htmlmin = require(&#39;gulp-htmlmin&#39;); &#21333;&#29420;&#24341;&#29992;&#10;gulp.task(&#39;testHtmlmin&#39;, function () &#123;&#10;&#160;&#160;&#160;&#160;var options = &#123;&#10;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;removeComments: true,//&#28165;&#38500;HTML&#27880;&#37322;&#10;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;collapseWhitespace: true,//&#21387;&#32553;HTML&#10;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;collapseBooleanAttributes: true,//&#30465;&#30053;&#24067;&#23572;&#23646;&#24615;&#30340;&#20540; &#60;input checked=&#34;true&#34;/&#62; ==&#62; &#60;input /&#62;&#10;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;removeEmptyAttributes: true,//&#21024;&#38500;&#25152;&#26377;&#31354;&#26684;&#23646;&#24615;&#20540; &#60;input id=&#34;&#34; /&#62; ==&#62; &#60;input /&#62;&#10;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;removeScriptTypeAttributes: true,//&#21024;&#38500;&#60;script&#62;&#30340;type=&#34;text/javascript&#34;&#10;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;removeStyleLinkTypeAttributes: true,//&#21024;&#38500;&#60;style&#62;&#21644;&#60;link&#62;&#30340;type=&#34;text/css&#34;&#10;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;minifyJS: true,//&#21387;&#32553;&#39029;&#38754;JS&#10;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;minifyCSS: true//&#21387;&#32553;&#39029;&#38754;CSS&#10;&#160;&#160;&#160;&#160;&#125;;&#10;&#160;&#160;&#160;&#160;gulp.src(&#39;src/html/*.html&#39;)&#10;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;.pipe(plugins.htmlmin(options))&#10;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;.pipe(gulp.dest(&#39;dist/html&#39;));&#10;&#125;);</span><br></pre></td></tr></table></figure>
-</li>
-</ul>
-<h4 id="3-7gulp_u4E4Bless_u6587_u4EF6_u7F16_u8BD1_28gulp-less_29"><a href="#3-7gulp_u4E4Bless_u6587_u4EF6_u7F16_u8BD1_28gulp-less_29" class="headerlink" title="3.7gulp之less文件编译(gulp-less)"></a>3.7gulp之less文件编译(gulp-less)</h4><p>将less文件编译成css，当有less文件发生改变自动编译less，并保证less语法错误或出现异常时能正常工作并提示错误信息。</p>
-<ul>
-<li>基本使用<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">var gulp = require(&#39;gulp&#39;),&#10;&#160;&#160;&#160;&#160;less = require(&#39;gulp-less&#39;);&#160;&#10;gulp.task(&#39;less&#39;, function () &#123;&#10;&#160;&#160;&#160;&#160;gulp.src(&#39;src/less/*.less&#39;)&#10;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;.pipe(less())&#10;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;.pipe(gulp.dest(&#39;src/css&#39;));&#10;&#125;);</span><br></pre></td></tr></table></figure>
-</li>
-</ul>
-<p><font color="red">一般会使用通配符自动编译less</font></p>
-<ul>
-<li><p>多模块编译less</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">var gulp = require(&#39;gulp&#39;),&#10;&#160;&#160;&#160;&#160; less = require(&#39;gulp-less&#39;),&#10;&#160;&#160;&#160;&#160; //&#26412;&#22320;&#23433;&#35013;gulp-minify-css [npm install gulp-minify-css --save-dev]&#10;&#160;&#160;&#160;&#160;cssmin = require(&#39;gulp-minify-css&#39;);&#10;gulp.task(&#39;testLess&#39;, function () &#123;&#10;&#160;&#160;&#160;&#160;gulp.src(&#39;src/less/**/*.less&#39;)&#10;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;.pipe(less())&#10;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;.pipe(cssmin())&#10;         //&#20860;&#23481;IE7&#21450;&#20197;&#19979;&#38656;&#35774;&#32622;compatibility&#23646;&#24615;&#10;        //.pipe(cssmin(&#123;compatibility: &#39;ie7&#39;&#125;))&#10;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;.pipe(gulp.dest(&#39;pub/css&#39;));&#10;&#125;);</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>自动编译<br>如果每修改一次less，就要编译一次，显然是很繁琐的，所以应当监听less改动，当有less文件发生改变时使其自动编译。配合实时重载live-reload插件轻松监听。</p>
-<ul>
-<li><p>新建less任务编译less文件</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">var gulp = require(&#39;gulp&#39;),&#10;     plugins = require(&#39;gulp-load-plugins&#39;)(); //&#33258;&#21160;&#25554;&#20214;&#24341;&#29992;&#10;    gulp.task(&#39;less&#39;, function () &#123;&#10;        return gulp.src(&#39;src/less/**/*.less&#39;)&#10;            .pipe(plugins.less()) //&#32534;&#35793;&#10;           .pipe(plugins.rename(function (file) &#123;&#10;           //&#25226;&#32534;&#35793;&#21518;less&#25991;&#20214;&#37325;&#21629;&#21517;&#20026;css&#25991;&#20214;&#10;           file.dirname = file.dirname.replace(path.sep + &#39;less&#39;, path.sep + &#39;css&#39;);&#10;    &#125;))&#10;    .pipe(gulp.dest(&#39;./modules/&#39;));//&#32534;&#35793;&#21518;&#23384;&#25918;&#30446;&#24405;&#10;&#125;);</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>建立监听事件</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"> plugins.livereload.listen(); //&#21551;&#21160;live-reload&#30417;&#21548;&#10;gulp&#10;.watch(&#39;src/less/**/*.less&#39;, [&#39;sass&#39;, &#39;csslint&#39;])&#10;.on(&#39;change&#39;, plugins.livereload.changed);</span><br></pre></td></tr></table></figure>
-</li>
-</ul>
-</li>
-</ul>
-<p><a href="http://www.gulpjs.com.cn/docs/recipes/server-with-livereload-and-css-injection/" target="_blank" rel="external">官方实时重载和CSS注入实例传送门</a></p>
-<h4 id="3-8_gulp_u4E4Bsass_u6587_u4EF6_u7F16_u8BD1_28gulp-sass_29"><a href="#3-8_gulp_u4E4Bsass_u6587_u4EF6_u7F16_u8BD1_28gulp-sass_29" class="headerlink" title="3.8 gulp之sass文件编译(gulp-sass)"></a>3.8 gulp之sass文件编译(gulp-sass)</h4><p>sass和less同为css预处理器，gulp处理方法也差不多</p>
-<ul>
-<li>用法<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">var gulp = require(&#39;gulp&#39;),&#10;plugins = require(&#39;gulp-load-plugins&#39;)(); //&#33258;&#21160;&#25554;&#20214;&#24341;&#29992;&#10; gulp.task(&#39;less&#39;, function () &#123;&#10;    return gulp.src(&#39;src/less/**/*.sass&#39;)&#10;      .pipe(plugins.sass()) //&#32534;&#35793;sass&#10;      .pipe(plugins.rename(function (file) &#123;&#10;    //&#37325;&#21629;&#21517;&#20026;css&#10;       file.dirname = file.dirname.replace(path.sep + &#39;scss&#39;, path.sep + &#39;css&#39;);&#10;    &#125;))&#10;    .pipe(gulp.dest(&#39;./modules/&#39;));//&#25351;&#23450;&#23384;&#25918;&#36335;&#24452;&#10;&#125;);</span><br></pre></td></tr></table></figure>
-</li>
-</ul>
-<h4 id="3-9_gulp_u4E4Bjs_u8BED_u6CD5_u68C0_u67E5_28gulp-jshint_29"><a href="#3-9_gulp_u4E4Bjs_u8BED_u6CD5_u68C0_u67E5_28gulp-jshint_29" class="headerlink" title="3.9 gulp之js语法检查(gulp-jshint)"></a>3.9 gulp之js语法检查(gulp-jshint)</h4><p>　根据jshint规则检查语法错误，规范项目编码。详细规则请查看<a href="http://www.jianshu.com/p/4cb23f9e19d3" target="_blank" rel="external">JHS详细规则</a></p>
-<ul>
-<li><p>基本使用</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">var gulp = require(&#39;gulp&#39;),&#10;jshint = require(&#34;gulp-jshint&#34;);&#10;gulp.task(&#39;jsLint&#39;, function () &#123;&#10;   gulp.src(&#39;client/**/*.js&#39;)&#10;     .pipe(jshint())&#10;     .pipe(jshint.reporter()); // &#36755;&#20986;&#26816;&#26597;&#32467;&#26524;&#10;&#125;);</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>项目实例<br>具体规则在项目根目录的.jshintrc文件里面</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">var gulp = require(&#39;gulp&#39;),&#10;plugins = require(&#39;gulp-load-plugins&#39;)(); //&#33258;&#21160;&#25554;&#20214;&#24341;&#29992;&#10;gulp.task(&#39;jshint&#39;, function () &#123;&#10;    return gulp.src(&#39;client/**/*.js&#39;)&#10;       .pipe(plugins.jshint())&#10;       .pipe(plugins.jshint.reporter(&#39;default&#39;))// &#35843;&#29992;default&#36755;&#20986;&#32467;&#26524;&#10;       .pipe(plugins.jshint.reporter(&#39;fail&#39;)); //&#35843;&#29992;fail&#36755;&#20986;&#26816;&#26597;&#38169;&#35823;&#10;&#125;);</span><br></pre></td></tr></table></figure>
-</li>
-</ul>
-<h4 id="3-10_gulp_u4E4Bcss_u8BED_u6CD5_u68C0_u67E5_28gulp-csslint_29"><a href="#3-10_gulp_u4E4Bcss_u8BED_u6CD5_u68C0_u67E5_28gulp-csslint_29" class="headerlink" title="3.10 gulp之css语法检查(gulp-csslint)"></a>3.10 gulp之css语法检查(gulp-csslint)</h4><p>根据规则检查CSS语法</p>
-<ul>
-<li>基本用法<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">var gulp = require(&#39;gulp&#39;),&#10;plugins = require(&#39;gulp-load-plugins&#39;)();&#10;gulp.task(&#39;csslint&#39;, function (done) &#123;&#10;   return gulp.src(d&#39;client/**/*.css&#39;)&#10;    .pipe(plugins.csslint(&#39;.csslintrc&#39;))//&#21152;&#36733;&#37197;&#32622;&#25991;&#20214;&#10;    .pipe(plugins.csslint.reporter())&#10;    .pipe(plugins.csslint.reporter(function (file) &#123;&#10;      if (!file.csslint.errorCount) &#123; //&#26377;&#38169;&#35823;&#65292;&#36755;&#20986;&#20855;&#20307;&#38169;&#35823;&#10;        done();&#10;      &#125;&#10;    &#125;));&#10;&#125;);</span><br></pre></td></tr></table></figure>
-</li>
-</ul>
-<h4 id="3-11_gulp_u4E4B_u91CD_u547D_u540D_28gulp-rename_29"><a href="#3-11_gulp_u4E4B_u91CD_u547D_u540D_28gulp-rename_29" class="headerlink" title="3.11 gulp之重命名(gulp-rename)"></a>3.11 gulp之重命名(gulp-rename)</h4><p>这个插件上面已经过了好多次了。</p>
-<ul>
-<li>基本用法<br>同时输出一个压缩过和一个未压缩的文件<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">var gulp = require(&#39;gulp&#39;),&#10; rename = require(&#39;gulp-rename&#39;),&#10;uglify = require(&#39;gulp-uglify&#39;),&#10;DEST = &#39;build/&#39;;&#10;gulp.task(&#39;default&#39;, function() &#123;&#10;   return gulp.src(&#39;foo.js&#39;) // &#36825;&#20250;&#36755;&#20986;&#19968;&#20010;&#26410;&#21387;&#32553;&#36807;&#30340;&#29256;&#26412;&#10;      .pipe(gulp.dest(DEST)) // &#36825;&#20250;&#36755;&#20986;&#19968;&#20010;&#21387;&#32553;&#36807;&#30340;&#24182;&#19988;&#37325;&#21629;&#21517;&#26410; foo.min.js &#30340;&#25991;&#20214;&#10;     .pipe(uglify())&#10;     .pipe(rename(&#123; extname: &#39;.min.js&#39; &#125;))&#10;     .pipe(gulp.dest(DEST));&#10;&#125;);</span><br></pre></td></tr></table></figure>
-</li>
-</ul>
-<h4 id="3-12_gulp_u4E4B_u6D4B_u8BD5gulp-mocha"><a href="#3-12_gulp_u4E4B_u6D4B_u8BD5gulp-mocha" class="headerlink" title="3.12 gulp之测试gulp-mocha"></a>3.12 gulp之测试gulp-mocha</h4><p>mocha 是一个简单、灵活有趣的 JavaScript 测试框架，用于 <a href="http://www.oschina.net/p/nodejs" target="_blank" rel="external">Node.js</a> 和浏览器上的 JavaScript 应用测试</p>
-<ul>
-<li><p>基本使用</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">var gulp = require(&#39;gulp&#39;);&#10;var mocha = require(&#39;gulp-mocha&#39;);&#10;gulp.task(&#39;default&#39;, function() &#123;&#10;  return gulp.src([&#39;test/test-*.js&#39;], &#123; read: false &#125;)&#10;          .pipe(mocha(&#123; reporter: &#39;spec&#39;,&#10;                globals: &#123; should: require(&#39;should&#39;) &#125;&#10;               &#125;));&#10;&#125;);</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>文件改动监听</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">var gulp = require(&#39;gulp&#39;);&#10;var mocha = require(&#39;gulp-mocha&#39;);&#10;var gutil = require(&#39;gulp-util&#39;); //gulp&#24037;&#20855;&#24211;&#10;gulp.task(&#39;mocha&#39;, function() &#123;&#10;    return gulp.src([&#39;test/*.js&#39;], &#123; read: false &#125;)&#10;      .pipe(mocha(&#123; reporter: &#39;list&#39; &#125;))&#10;      .on(&#39;error&#39;, gutil.log);&#125;); //&#35760;&#24405;&#38169;&#35823;&#10;gulp.task(&#39;watch-mocha&#39;, function() &#123;&#10;     gulp.watch([&#39;lib/**&#39;, &#39;test/**&#39;], [&#39;mocha&#39;]);&#125;);</span><br></pre></td></tr></table></figure>
-</li>
-</ul>
-<h4 id="3-13_gulp_u4E4B_u81EA_u52A8_u5237_u65B0gulp-livereload"><a href="#3-13_gulp_u4E4B_u81EA_u52A8_u5237_u65B0gulp-livereload" class="headerlink" title="3.13 gulp之自动刷新gulp-livereload"></a>3.13 gulp之自动刷新<a href="https://github.com/vohof/gulp-livereload" target="_blank" rel="external">gulp-livereload</a></h4><p>监听到文件改动自动刷新前端页面，不需要F5。<br>上面好几个例子已经使用过了,下面简单介绍下。</p>
-<ul>
-<li>基本用法<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">var gulp = require(&#39;gulp&#39;),&#10;     plugins = require(&#39;gulp-load-plugins&#39;)(); //&#33258;&#21160;&#25554;&#20214;&#24341;&#29992;&#10;gulp.task(&#39;sass&#39;, function() &#123;&#10;     gulp.src(&#39;sass/**/*.scss&#39;)&#10;        .pipe(plugins.sass())&#10;        .pipe(gulp.dest(&#39;css&#39;))&#10;        .pipe(plugins.livereload());&#125;);&#10;gulp.task(&#39;watch&#39;, function() &#123;&#10;    plugins.livereload.listen(); //&#35201;&#22312;&#36825;&#37324;&#35843;&#29992;listen()&#26041;&#27861;&#10;    gulp.watch(&#39;sass/**/*.scss&#39;, [&#39;sass&#39;]);&#10;&#125;);</span><br></pre></td></tr></table></figure>
-</li>
-</ul>
-<p>####3.14 gulp之自动重启node程序gulp-nodemon<br>监听到node服务文件改动自动重启node，<a href="https://www.npmjs.com/package/gulp-nodemon" target="_blank" rel="external">官方文档传送门</a></p>
-<ul>
-<li>基本用法<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">gulp.task(&#39;nodemon&#39;, function () &#123;&#10;  return plugins.nodemon(&#123;&#10;    script: &#39;server.js&#39;,&#10;    nodeArgs: [&#39;--debug&#39;],&#10;    ext: &#39;js,html&#39;, //&#25991;&#20214;&#25193;&#23637;&#21517;&#10;    env:&#160;&#123;&#160;&#39;NODE_ENV&#39;:&#160;&#39;development&#39;&#65292;//&#29615;&#22659;-&#24320;&#21457;&#29615;&#22659;&#65288;&#29983;&#20135;&#29615;&#22659;&#65289;&#10;    watch: [&#39;server.js&#39;, &#39;config/**/*.js&#39;, &#39;modules/*/server/**/*.js&#39;]&#65292;&#10;    tasks:&#160;[&#39;jshint&#39;] //&#20219;&#21153;&#10;  &#125;);&#10;&#125;);</span><br></pre></td></tr></table></figure>
-</li>
-</ul>
-<h4 id="3-15_gulp_u4E4B_u5176_u4ED6_u63D2_u4EF6"><a href="#3-15_gulp_u4E4B_u5176_u4ED6_u63D2_u4EF6" class="headerlink" title="3.15 gulp之其他插件"></a>3.15 gulp之其他插件</h4><ul>
-<li><p>run-sequence<br>让gulp任务之间可以单独执行，解除任务之间相互依赖，增强tasks复用性</p>
-<ul>
-<li>基本用法<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">var runSequence = require(&#39;run-sequence&#39;)&#65307;&#10;gulp.task(&#39;default&#39;, function(done) &#123;&#10;   runSequence(&#39;env:dev&#39;, &#39;lint&#39;, [&#39;nodemon&#39;, &#39;watch&#39;], done);&#10; // env:dev&#39;, &#39;lint&#39;, &#39;nodemon&#39;, &#39;watch&#39;&#22343;&#26159;&#20219;&#21153;&#10;&#125;);</span><br></pre></td></tr></table></figure>
-</li>
-</ul>
-</li>
-<li><p><a href="http://www.browsersync.io/" target="_blank" rel="external">browser-sync</a><br>静态文件服务器，同时也支持浏览器自动刷新，和gulp-livereload功能差不多。</p>
-<ul>
-<li>基本使用<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">var gulp = require(&#39;gulp&#39;);&#10;var browserSync = require(&#39;browser-sync&#39;);&#10;gulp.task(&#39;browser-sync&#39;, function() &#123;&#10;    browserSync(&#123;&#10;        files: &#34;**&#34;,&#10;          server: &#123;&#10;               baseDir: &#34;./&#34;&#10;                 &#125;&#10;     &#125;);&#10;&#125;);&#10;gulp.task(&#39;default&#39;, [&#34;browser-sync&#34;]);</span><br></pre></td></tr></table></figure>
-</li>
-</ul>
-</li>
-<li><p>删除文件del<br>你也许会想要在编译文件之前删除一些文件,del 是一个node模块，<a href="https://github.com/sindresorhus/del" target="_blank" rel="external">github传送门</a></p>
-<ul>
-<li>基本用法<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">var gulp = require(&#39;gulp&#39;);&#10;var del = require(&#39;del&#39;);&#10;gulp.task(&#39;clean:tmp&#39;, function (cb) &#123;&#10;      del([ &#39;dist/report.csv&#39;,&#10;       // &#20351;&#29992;&#36890;&#37197;&#27169;&#24335;&#26469;&#21305;&#37197; `tmp` &#25991;&#20214;&#22841;&#20013;&#30340;&#25152;&#26377;&#19996;&#35199;&#10;         &#39;dist/tmp/**/*&#39;,&#10;// &#25105;&#20204;&#19981;&#24076;&#26395;&#21024;&#25481;&#36825;&#20010;&#25991;&#20214;&#65292;&#20351;&#29992;&#65281;&#25490;&#38500;&#10;        &#39;!dist/tmp/temp.json&#39;&#10;        ], cb);&#10;&#125;);&#10;gulp.task(&#39;default&#39;, [&#39;clean:tmp&#39;]);</span><br></pre></td></tr></table></figure>
-</li>
-</ul>
-</li>
-</ul>
-<h2 id="u7ED3_u8BED"><a href="#u7ED3_u8BED" class="headerlink" title="结语"></a>结语</h2><p>关于gulp用法以及常用插件就讲解到这里，如果错误请指正。</p>
-
+<li>windows下莫名错误。<br>如果网络良好，还是安装出现莫名其妙错误，那么你就应该换Git安装了。<br>window平台下建议使用git安装。
       
     </div>
     
@@ -514,6 +311,10 @@ a??能匹配 a.b,abc,但不能匹配ab/,因为它不会匹配路径分隔符
 
       
 
+      
+        <p class="article-more-link">
+          <a  href="/blog/2016/01/28/gulp/#more">more >></a>
+        </p>
       
       <div class="clearfix"></div>
     </div>
@@ -574,46 +375,7 @@ a??能匹配 a.b,abc,但不能匹配ab/,因为它不会匹配路径分隔符
 <ul>
 <li>单独安装<pre><code>npm install jshint -g
 </code></pre>或者<pre><code>npm install --save-dev jshint
-</code></pre><strong>–save</strong>保存到配置文件package.json的devDependencies里面<h3 id="u4F7F_u7528"><a href="#u4F7F_u7528" class="headerlink" title="使用"></a>使用</h3></li>
-<li><p>单独使用</p>
-<pre><code>jshint myfile.js
-</code></pre><p>如下图：</p>
-<p><img src="http://upload-images.jianshu.io/upload_images/1323902-d4ace25352190281.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="Paste_Image.png"></p>
-</li>
-<li>gulp-jshint<pre><code>var gulp = require(&apos;gulp&apos;),
-gulpLoadPlugins = require(&apos;gulp-load-plugins&apos;),
-plugins = gulpLoadPlugins();
-</code></pre>定义一个名为jshint的任务<pre><code>gulp.task(&apos;jshint&apos;, function () {
-           return gulp.src()
-              .pipe(plugins.jshint())
-              .pipe(plugins.jshint.reporter(&apos;default&apos;))
-              .pipe(plugins.jshint.reporter(&apos;fail&apos;));
-</code></pre>然后执行单个任务<pre><code>gulp jshint
-</code></pre>reporter会在控制台输出一些jshint的日志。<br>执行效果如下：<br><img src="http://upload-images.jianshu.io/upload_images/1323902-4e57daf8b154779d.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="Paste_Image.png"></li>
-<li>grunt-contrib-jshint<ul>
-<li>初始化配置<br>   grunt.initConfig({<pre><code>.......
- jshint: {
-    all: {
-         src:你的文件（一般是模糊匹配）,
-         options: {
-            jshintrc: true,
-            node: true,
-            mocha: true,
-            jasmine: true
-         }
-       }
-   },
-</code></pre>   …….<pre><code>};
-</code></pre></li>
-<li>注册任务<pre><code>grunt.loadNpmTasks(&apos;grunt-contrib-jshint&apos;);
-grunt.registerTask(&apos;jshint&apos;, &apos;start the jshint&apos;,funciton(){});
-</code></pre></li>
-<li>执行<pre><code>grunt jshint
-</code></pre><strong>grunt 可以参考这篇博客</strong><a href="http://www.cnblogs.com/haogj/p/4781677.html" target="_blank" rel="external">grunt-contrib-jshint</a><br><strong>JSHint具体配置可以参考</strong><a href="http://www.jianshu.com/p/4cb23f9e19d3" target="_blank" rel="external">JSHint配置说明</a></li>
-</ul>
-</li>
-</ul>
-
+</code></pre><strong>–save</strong>保存到配置文件package.json的devDependencies里面
       
     </div>
     
@@ -622,6 +384,10 @@ grunt.registerTask(&apos;jshint&apos;, &apos;start the jshint&apos;,funciton(){}
       
       
 
+      
+        <p class="article-more-link">
+          <a  href="/blog/2016/01/26/gulp-jshint/#more">more >></a>
+        </p>
       
       <div class="clearfix"></div>
     </div>
@@ -671,260 +437,7 @@ grunt.registerTask(&apos;jshint&apos;, &apos;start the jshint&apos;,funciton(){}
 <blockquote>
 <p>JSHint, A Static Code Analysis Tool for JavaScript;<br>This is JSHint, a tool that helps to detect errors and potential<br>problems in your JavaScript code.</p>
 </blockquote>
-<p>由此可见JSHint是一个javascript代码分析检测工具，不仅可以帮助我们检测到js代码错误和潜在问题，也能帮助我们规范代码开发。</p>
-<h3 id="JSHint_u5B89_u88C5_28IED_webstrom_29"><a href="#JSHint_u5B89_u88C5_28IED_webstrom_29" class="headerlink" title="JSHint安装(IED webstrom)"></a>JSHint安装(IED webstrom)</h3><hr>
-<h6 id="NPM_u5B89_u88C5"><a href="#NPM_u5B89_u88C5" class="headerlink" title="NPM安装"></a>NPM安装</h6><pre><code>npm install jshint -g
-</code></pre><h6 id="JSHint_u8BBE_u7F6E"><a href="#JSHint_u8BBE_u7F6E" class="headerlink" title="JSHint设置"></a>JSHint设置</h6><ul>
-<li>webstrom内置了JSHint和jslint:<br>Default_Setting–&gt;Languages and frameworks–&gt;javascript–&gt;Code Quality ToolS–&gt;JSHint<blockquote>
-<p><img src="http://upload-images.jianshu.io/upload_images/1323902-736d84172a2dc7f0.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="Paste_Image.png"></p>
-</blockquote>
-</li>
-</ul>
-<h3 id="jshint_u914D_u7F6E"><a href="#jshint_u914D_u7F6E" class="headerlink" title="jshint配置"></a>jshint配置</h3><hr>
-<h6 id="u4E09_u79CD_u914D_u7F6E_u65B9_u5F0F"><a href="#u4E09_u79CD_u914D_u7F6E_u65B9_u5F0F" class="headerlink" title="三种配置方式"></a>三种配置方式</h6><ul>
-<li>通过 –config标记手动配置;</li>
-<li><p>使用 <strong>.jshintrc</strong> 文件:</p>
-<blockquote>
-<p>这个设置允许您每个项目有不同的配置文件。把你的文件放到项目根目录,只要你运行JSHint从任何地方在你的项目目录树,将使用相同的配置文件。</p>
-</blockquote>
-</li>
-<li><p>配置放到项目的 <strong>package.json</strong> 文件里面， <strong>jshintConfig</strong> 下面<br>配置文件是一 个简单的JSON文件,指定JSHint选项来打开或关闭。例如,以下文件将启用警告未定义的和未使用的变量和告诉JSHint全局变量命名 MY_GLOBAL</p>
-<pre><code>{
-  &quot;undef&quot;: true,
-  &quot;unused&quot;: true,
- &quot;predef&quot;: [ &quot;MY_GLOBAL&quot; ]
- }
-</code></pre></li>
-</ul>
-<h4 id="u5185_u8054_u914D_u7F6E"><a href="#u5185_u8054_u914D_u7F6E" class="headerlink" title="内联配置"></a>内联配置</h4><ul>
-<li><p>除了使用配置文件,您可以在你的文件中使用jshint或者globals开头，并跟着配置项以冒号分隔值列表来配置JSHint。例如,下面的代码片段将启用警告未定义的和未使用的变量和告诉JSHint全局变量命名MY_GLOBAL。</p>
-<pre><code>/* jshint undef: true, unused: true */
-/* globals MY_GLOBAL */
-</code></pre><p>可以使用单行或者多行来配置JSHint，如果放在函数里面，则只影响该函数。</p>
-</li>
-</ul>
-<h3 id="JSHint__u5FFD_u7565"><a href="#JSHint__u5FFD_u7565" class="headerlink" title="JSHint 忽略"></a>JSHint 忽略</h3><ul>
-<li>ignore 告诉jshint忽略一个代码块<pre><code>// Code here will be linted with JSHint.
-/* jshint ignore:start */
-// Code here will be ignored by JSHint.
-/* jshint ignore:end */
-</code></pre>在jshint <strong>ignore:start</strong>和 <strong>ignore:end</strong>之间的所有代码都将被JSHint忽略,所以你可以使用像<a href="http://facebook.github.io/react/" target="_blank" rel="external">Facebook React</a>这样的扩展框架。</li>
-<li>可以忽略一行:<pre><code>ignoreThis(); // jshint ignore:line
-</code></pre></li>
-</ul>
-<hr>
-<h3 id="JSHint_u914D_u7F6E_u9009_u9879"><a href="#JSHint_u914D_u7F6E_u9009_u9879" class="headerlink" title="JSHint配置选项"></a>JSHint配置选项</h3><ul>
-<li><a href="http://jshint.com/docs/options/#bitwise" target="_blank" rel="external">bitwise</a><br>禁用位运算符，位运算符在 JavaScript 中使用较少，经常是把 &amp;&amp; 错输成 &amp;。<pre><code>bitwise: true
-</code></pre></li>
-<li><a href="http://jshint.com/docs/options/#camelcase" target="_blank" rel="external">camelcase</a><br>警告:此选项已被弃用,将在JSHint的下一个主要版本被删除.<br>此选项可以强制所有变量名称为使用驼峰风格或UPPER_CASE用下划线。<pre><code>camelcase:true/false
-</code></pre></li>
-<li><a href="http://jshint.com/docs/options/#curly" target="_blank" rel="external">curly</a><br>循环或者条件语句必须使用花括号包围.<br>这个选项需要你总是把花括号在块循环和条件。JavaScript块时可以省略括号包含只有一个语句,例如:<pre><code>while (day)
-  shuffle();
-</code></pre>然而,在某些情况下,它会导致错误(你可能会认为 sleep()<br>是一个循环的一部分,而事实上它不是)<pre><code>while (day)
-    shuffle();
-  sleep();
-</code></pre></li>
-<li><a href="http://jshint.com/docs/options/#enforceall" target="_blank" rel="external">enforceall</a><br>警告:此选项已被弃用,将在JSHint的下一个主要版本被删除.<br>它启用所有强制执行选项和禁用该版本中定义的所有的<a href="http://jshint.com/docs/options/#relaxing-options" target="_blank" rel="external">Relaxing options</a>；</li>
-<li><a href="http://jshint.com/docs/options/#eqeqeq" target="_blank" rel="external">eqeqeq</a><br>设置为true,禁止使用这个选项 ==和 !=，强制使用 ===和 !==。<pre><code>eqeqeq: true
-</code></pre></li>
-<li><a href="http://jshint.com/docs/options/#es3" target="_blank" rel="external">es3</a><br>警告:此选项将在JSHint的下一个主要版本被删除,使用esversion: 3代替.<br>使用ECMAScript 3规范。使用这个选项主要为了兼容低级浏览器 IE 6/7/8/9-and其他遗留JavaScript环境。</li>
-<li><a href="http://jshint.com/docs/options/#es5" target="_blank" rel="external">es5</a><br>警告:此选项将被删除在JSHint的下一个主要版本，使用 esversion: 5代替。<br>这个选项允许语法中定义ECMAScript 5.1规范，这包括允许保留关键字作为对象属性。</li>
-<li><a href="http://jshint.com/docs/options/#esversion" target="_blank" rel="external">esversion</a><br>这个选项用于指定的ECMAScript版本代码必须遵循。它可以假设以下值之一:<br>3–如果你需要可执行程序在老这类浏览器Internet Explorer 6/7/8/9-and其他遗留JavaScript环境<br>5–先使语法中定义ECMAScript 5.1规范。这包括允许保留关键字作为对象属性。<br>6–告诉JSHint代码使用ECMAScript 6具体的语法。请注意,并不是所有的浏览器都实现它们。</li>
-<li><a href="http://jshint.com/docs/options/#forin" target="_blank" rel="external">forin</a><br>这个选项要求所有 for in循环过滤对象的item。他在声明中允许for遍历一个对象所有属性的名称包括通过原型链继承来的属性。</li>
-<li><a href="http://jshint.com/docs/options/#freeze" target="_blank" rel="external">freeze</a><br>这个选项禁止重写原生对象的原型列如 Array, Date等等。</li>
-<li><a href="http://jshint.com/docs/options/#funcscope" target="_blank" rel="external">funcscope</a><br>禁止从外部访问内部声明的变量<pre><code>function test() {
-   if (true) {
-     var x = 0;
-  }
-   x += 1; // Default: &apos;x&apos; used out of scope.
-      // No warning when funcscope:true
-  }
-</code></pre></li>
-<li><a href="http://jshint.com/docs/options/#futurehostile" target="_blank" rel="external">futurehostile</a><br>允许警告js未来版本中定义的标识符。</li>
-<li><a href="http://jshint.com/docs/options/#globals" target="_blank" rel="external">globals</a><br>这个选项可以用来指定一个没有正式定义的全局变量的白名单。<br>配置 globals在单个文件,看看内联配置.</li>
-<li><a href="http://jshint.com/docs/options/#immed" target="_blank" rel="external">immed</a><br>警告:此选项已被弃用,将在JSHint的下一个主要版本被删除。<br>需要直接调用的函数必须被括号包围，如：<code>（function（）{}（））;</code></li>
-<li><a href="http://jshint.com/docs/options/#indent" target="_blank" rel="external">indent</a><br>警告:此选项将在JSHint的下一个主要版本被删除。<br>设置代码缩进长度</li>
-<li><a href="http://jshint.com/docs/options/#iterator" target="_blank" rel="external">iterator</a><br>禁止<strong>iterator</strong>属性有关的警告。<br>此属性不支持所有浏览器所以小心使用它。</li>
-<li><a href="http://jshint.com/docs/options/#latedef" target="_blank" rel="external">latedef</a><br>禁止定义之前使用变量。<br>这个选项设置为“nofunc”将允许函数声明被忽略。</li>
-<li><a href="http://jshint.com/docs/options/#maxcomplexity" target="_blank" rel="external">maxcomplexity</a><br>设置代码文件独立直线路径最大复杂度检测。</li>
-<li><a href="http://jshint.com/docs/options/#maxdepth" target="_blank" rel="external">maxdepth</a><br>设置代码最大嵌套深度。<pre><code>// jshint maxdepth:2
- function main(meaning) {
-     var day = true;
-           if (meaning === 42) {
-                 while (day) {
-                      shuffle();
-                      if (tired) {
-                      // JSHint: Blocks are nested too deeply (3).
-                       sleep();
-                     }
-                }
-         }
-  }
-</code></pre></li>
-<li><a href="http://jshint.com/docs/options/#maxerr" target="_blank" rel="external">maxerr</a><br>设置JSHint最大警告数。默认50</li>
-<li><a href="http://jshint.com/docs/options/#maxlen" target="_blank" rel="external">maxlen</a><br>警告:此选项将在JSHint的下一个主要版本被删除<br>设置最大行数</li>
-<li><p><a href="http://jshint.com/docs/options/#maxparams" target="_blank" rel="external">maxparams</a><br>这个选项允许您设置每个函数的形参最大数量</p>
-<pre><code>// jshint maxparams:3
-function login(request, onSuccess) {
-    // ...
- }
-
-// JSHint: Too many parameters per function (4).
-function logout(request, isManual, whereAmI, onSuccess) {
-    // ...
-}
-</code></pre></li>
-<li><a href="http://jshint.com/docs/options/#maxstatements" target="_blank" rel="external">maxstatements</a><br>这个选项允许您设置语句允许的最大声明数:<br>  //  shint maxstatements:4<pre><code> function main() {
-   var i = 0;
-   var j = 0;
-    // Function declarations count as one statement. Their bodies
-    // don&apos;t get taken into account for the outer function.
-   function inner() {
-          var i2 = 1;
-          var j2 = 1;
-          return i2 + j2;
-      }
-      j = i + j;
-      return j; // JSHint: Too many statements per function. (5)
-}
-</code></pre>函数也算声明。</li>
-<li><a href="http://jshint.com/docs/options/#newcap" target="_blank" rel="external">newcap</a><br>警告此选项已被弃用,将被删除在JSHint的下一个主要版本<br>要求所有构造器使用<code>new F()</code>形式。</li>
-<li><a href="http://jshint.com/docs/options/#noarg" target="_blank" rel="external">noarg</a><br>禁止使用这个选项 arguments.caller和 arguments.callee。这两个 .caller<br>和.callee将会被弃用。事实上,ECMAScript 5 严格模式禁止使用arguments.callee</li>
-<li><a href="http://jshint.com/docs/options/#nocomma" target="_blank" rel="external">nocomma</a><br>这个选项禁止使用逗号操作符。</li>
-<li><a href="http://jshint.com/docs/options/#noempty" target="_blank" rel="external">noempty</a><br>警告此选项已被弃用,将被删除在JSHint的下一个主要版本。<br>空代码块警告。</li>
-<li><a href="http://jshint.com/docs/options/#nonbsp" target="_blank" rel="external">nonbsp</a><br>不换行的空格警告</li>
-<li><a href="http://jshint.com/docs/options/#nonew" target="_blank" rel="external">nonew</a><br>这个选项禁止使用new构造器函数。有些人喜欢调用构造函数，但是不赋值给任何对象:<pre><code>new MyConstructor();
-</code></pre></li>
-<li><a href="http://jshint.com/docs/options/#notypeof" target="_blank" rel="external">notypeof</a><br>检查无效 typeof操作符的值<pre><code>// &apos;fuction&apos; instead of &apos;function&apos;
-if (typeof a == &quot;fuction&quot;) { // Invalid typeof value &apos;fuction&apos;
-  // ...
-}
-</code></pre></li>
-<li><a href="http://jshint.com/docs/options/#predef" target="_blank" rel="external">predef</a><br>扩展的隐式全局变量</li>
-<li><a href="http://jshint.com/docs/options/#quotmark" target="_blank" rel="external">quotmark</a><br>警告此选项已被弃用,将被JSHint的下一个主要版本删除。<br>这个选项执行代码中使用引号的一致性。它接受三个值: <ul>
-<li>true– 代码字符串禁止单引号双引号混用,</li>
-<li>“single”–只允许单引号 </li>
-<li>“double”–只允许双引号。</li>
-</ul>
-</li>
-<li><a href="http://jshint.com/docs/options/#shadow" target="_blank" rel="external">shadow</a><br>检查变量重复定义<br>他接受4个值：<ul>
-<li>“inner”  只检查是否在相同的作用域重复定义</li>
-<li>“outer” 检查外部作用域</li>
-<li>false 与inne一样</li>
-<li>true 允许变量覆盖</li>
-</ul>
-</li>
-<li><a href="http://jshint.com/docs/options/#singleGroups" target="_blank" rel="external">singleGroups</a><br>禁止使用分组操作符<pre><code>// jshint singleGroups: true
-delete(obj.attr); // Warning: Unnecessary grouping operator.
-</code></pre></li>
-<li><a href="http://jshint.com/docs/options/#strict" target="_blank" rel="external">strict</a><br>ECMAScript 5严格模式<ul>
-<li>“global” - 全局层面的严格模式”use strict”;</li>
-<li>“implied” - 文件里面使用”use strict”;</li>
-<li>false - 禁止使用严格模式</li>
-<li>true - 函数上面必须使用一个”use strict”;</li>
-</ul>
-</li>
-<li><a href="http://jshint.com/docs/options/#undef" target="_blank" rel="external">undef</a><br>变量未定义<pre><code>// jshint undef:true
-function test() {
- var myVar = &apos;Hello, World&apos;;
-  // Oops, typoed here. JSHint with undef will complain
-     console.log(myvar);
- }
-   如果你的另一个文件中定义的变量,你可以使用 global指令告诉JSHint。
-</code></pre></li>
-<li><a href="http://jshint.com/docs/options/#unused" target="_blank" rel="external">unused</a><br>变量定义未使用<pre><code> // jshint unused:true
- function test(a, b) {
-         var c, d = 2;
-        return a + d;
-   }
- test(1, 2);
- // Line 3: &apos;b&apos; was defined but never used.
-// Line 4: &apos;c&apos; was defined but never used
-</code></pre></li>
-<li><a href="http://jshint.com/docs/options/#varstmt" target="_blank" rel="external">varstmt</a><br>设置为true时，禁止使用var声明变量<pre><code>// jshint varstmt: true
-var a; // Warning: `var` declarations are forbidden. Use `let`  or `const` instead.
-</code></pre><h3 id="u5BBD_u677E_u9009_u9879"><a href="#u5BBD_u677E_u9009_u9879" class="headerlink" title="宽松选项"></a>宽松选项</h3>设置为true时,这些选项会使代码JSHint产生更少的警告。</li>
-<li><a href="http://jshint.com/docs/options/#asi" target="_blank" rel="external">asi</a><br>禁止缺少分号警告</li>
-<li><a href="http://jshint.com/docs/options/#boss" target="_blank" rel="external">boss</a><br>禁止比较表达式的值没有达到预期警告。<br>通常情况下,代码 <code>if (a = 10) {}</code>是一个错误,但他有可能这样用<pre><code>for (var i = 0, person; person = people[i]; i++) {}
-</code></pre>你可以禁止这个错误，比如<pre><code>for (var i = 0, person; (person = people[i]); i++) {}
-</code></pre></li>
-<li><a href="http://jshint.com/docs/options/#debug" target="_blank" rel="external">debug</a><br>忽略 debugger</li>
-<li><a href="http://jshint.com/docs/options/#elision" target="_blank" rel="external">elision</a><br>告诉JSHint代码使用ES3数组省略元素,或空元素(例如, [1, , , 4, , , 7]<br>).</li>
-<li><a href="http://jshint.com/docs/options/#eqnull" target="_blank" rel="external">eqnull</a><br>禁止 == null比较。通常这样的比较有用,当你想检查一个变量是否null<br>或 undefined</li>
-<li><a href="http://jshint.com/docs/options/#eqnull" target="_blank" rel="external">eqnull</a><br>警告此选项将在JSHint的下一个主要版本被 esversion: 6代替<br>使用ECMAScript 6具体语法，有些浏览器不支持</li>
-<li><a href="http://jshint.com/docs/options/#evil" target="_blank" rel="external">evil</a><br>禁止使用eval</li>
-<li><a href="http://jshint.com/docs/options/#expr" target="_blank" rel="external">expr</a><br>禁止使用表达式，一般的使用函数调用。</li>
-<li><a href="http://jshint.com/docs/options/#globalstrict" target="_blank" rel="external">globalstrict</a><br>下个版本中会使用 strict: “global”代替。<br>全局严格模式会和第三方小插件冲突，所以不推荐使用。</li>
-<li><a href="http://jshint.com/docs/options/#lastsemic" target="_blank" rel="external">lastsemic</a><br>检查一行代码最后声明后面的分号是否遗漏<br><code>var name = (function() { return &#39;Anton&#39; }());</code></li>
-<li><a href="http://jshint.com/docs/options/#laxbreak" target="_blank" rel="external">laxbreak</a><br>检查不安全的折行(下个版本将被删除)</li>
-<li><a href="http://jshint.com/docs/options/#laxcomma" target="_blank" rel="external">laxcomma</a><br>检查逗号在代码行最前面的编程风格<pre><code>var obj = {
-   name: &apos;Anton&apos;
-  , handle: &apos;valueof&apos;
- , role: &apos;SW Engineer&apos;
-};
-</code></pre></li>
-<li><a href="http://jshint.com/docs/options/#loopfunc" target="_blank" rel="external">loopfunc</a><br>禁止内部循环，定义函数的内部循环可能导致这样的错误:<pre><code> var nums = [];
-  for (var i = 0; i &lt; 10; i++) {
-    nums[i] = function (j) {
-    return i + j;
-  };
- }
-nums[0](2); // Prints 12 instead of 2
-</code></pre>解决上面的代码,你需要复制的变量 i:<pre><code>var nums = [];
-   for (var i = 0; i &lt; 10; i++) {
-          (function (i) {
-               nums[i] = function (j) {
-                                   return i + j;
-                                };
-                             }(i));
-       }
-</code></pre></li>
-<li><a href="http://jshint.com/docs/options/#moz" target="_blank" rel="external">moz</a><br>JSHint Mozilla扩展。除非你开发专门为Firefox web浏览器不需要这个选项。</li>
-<li><a href="http://jshint.com/docs/options/#multistr" target="_blank" rel="external">multistr</a><br>将在下个版本中被删除<br>这个选项会抑制警告多行字符串。允许多行字符串在JavaScript是危险的,如果你小心在一个转义字符()和一个新行之间输入一个空格，将会导致整个字符串错误。<br>注意,即使这个选项允许正确多行字符串,它仍然警告说对多行字符串没有转义字符之间或与任何转义字符和空格。<pre><code>// jshint multistr:true
-var text = &quot;Hello\World&quot;; // All good.
-text = &quot;HelloWorld&quot;; // Warning, no escape character.
-text = &quot;Hello\World&quot;; // Warning, there is a space after \
-</code></pre></li>
-<li><a href="http://jshint.com/docs/options/#noyield" target="_blank" rel="external">noyield</a><br>检查函数生成器没有yield声明</li>
-<li><a href="http://jshint.com/docs/options/#plusplus" target="_blank" rel="external">plusplus</a><br>禁止一元递增和递减运算符的使用</li>
-<li><a href="http://jshint.com/docs/options/#proto" target="_blank" rel="external">proto</a><br>禁止关于<code>__proto__</code>属性的警告</li>
-<li><a href="http://jshint.com/docs/options/#scripturl" target="_blank" rel="external">scripturl</a><br>禁止使用脚本URL定向，比如<code>javascript:...</code></li>
-<li><a href="http://jshint.com/docs/options/#sub" target="_blank" rel="external">sub</a><br>下个版本将被删除<br>检查[]使用，可以使用.代替[]<br><code>person[&#39;name&#39;] vs.person.name.</code></li>
-<li><a href="http://jshint.com/docs/options/#supernew" target="_blank" rel="external">supernew</a><br>检查怪异结构 <code>new function () { ... }和 new Object;</code><br>这样的结构是有时用于单列在JavaScript中:<pre><code>var singleton = new function() {
-   var privateVar;
-   this.publicMethod = function () {}
-   this.publicMethod2 = function () {}
-};
-</code></pre></li>
-<li><a href="http://jshint.com/docs/options/#validthis" target="_blank" rel="external">validthis</a><br><strong>注意:</strong>可以使用这个选项只有在函数的范围<br>在非构造器函数中使用 this</li>
-<li><a href="http://jshint.com/docs/options/#withstmt" target="_blank" rel="external">withstmt</a><br>检查with使用声明。<br>with声明语句可以引起开发者和意外全局变量定义之间的混乱。</li>
-</ul>
-<hr>
-<h3 id="u73AF_u5883_u53D8_u91CF"><a href="#u73AF_u5883_u53D8_u91CF" class="headerlink" title="环境变量"></a>环境变量</h3><p>这些选项让JSHint知道一些预先定义的全局变量。</p>
-<ul>
-<li><a href="http://jshint.com/docs/options/#browser" target="_blank" rel="external">browser</a><br>暴露浏览器属性的全局变量，列如 window,document;<br><strong>注意:</strong>这个选项不暴露变量 alert或 console。</li>
-<li><a href="http://jshint.com/docs/options/#browserify" target="_blank" rel="external">browserify</a><br>这个选项定义全局变量使用时可用Browserify工具建立一个项目</li>
-<li><a href="http://jshint.com/docs/options/#couch" target="_blank" rel="external">couch</a><br>这个选项定义全局暴露CouchDB。CouchDB是一个面向文档的数据库,可以查询和索引MapReduce的方式使用JavaScript</li>
-<li><a href="http://jshint.com/docs/options/#devel" target="_blank" rel="external">devel</a><br>这个选项定义了全局变量,通常用于日志调试: console, alert等等</li>
-<li><a href="http://jshint.com/docs/options/#dojo" target="_blank" rel="external">dojo</a><br>这个选项定义全局暴露的Dojo Toolkit.</li>
-<li><a href="http://jshint.com/docs/options/#jasmine" target="_blank" rel="external">jasmine</a><br>这个选项定义全局暴露jasmine的单元测试框架.</li>
-<li><a href="http://jshint.com/docs/options/#jquery" target="_blank" rel="external">jquery</a><br>这个选项定义全局暴露的jQuery库。</li>
-<li><a href="http://jshint.com/docs/options/#mocha" target="_blank" rel="external">mocha</a><br>这个选项定义全局暴露的“BDD”和“TDD”的ui mocha单元测试框架.</li>
-<li><a href="http://jshint.com/docs/options/#module" target="_blank" rel="external">module</a><br>这个选项告诉JSHint,输入代码描述了一个ECMAScript 6模块。所有模块的代码解释为严格模式代码。</li>
-<li><a href="http://jshint.com/docs/options/#mootools" target="_blank" rel="external">mootools</a><br>这个选项定义全局暴露的MooToolsJavaScript框架。</li>
-<li><a href="http://jshint.com/docs/options/#node" target="_blank" rel="external">node</a><br>这个选项定义全局变量可以当你的代码运行在node的运行时环境</li>
-<li><a href="http://jshint.com/docs/options/#nonstandard" target="_blank" rel="external">nonstandard</a><br>这个选项定义非标准但广泛采用全局变量等 escape和 unescape.</li>
-<li><a href="http://jshint.com/docs/options/#phantom" target="_blank" rel="external">phantom</a><br>这个选项定义全局可用你的核心运行时内部PhantomJS运行时环境</li>
-<li><a href="http://jshint.com/docs/options/#prototypejs" target="_blank" rel="external">prototypejs</a><br>这个选项定义全局暴露的prototypejs框架。</li>
-<li><a href="http://jshint.com/docs/options/#qunit" target="_blank" rel="external">qunit</a><br>这个选项定义全局暴露QUnit单元测试框架</li>
-<li><a href="http://jshint.com/docs/options/#rhino" target="_blank" rel="external">rhino</a><br>这个选项定义全局变量可以当你的代码运行在rhino的运行时环境。rhino是一个开源的实现完全用Java编写的JavaScript。</li>
-<li><a href="http://jshint.com/docs/options/#shelljs" target="_blank" rel="external">shelljs</a><br>这个选项定义全局暴露ShellJS库</li>
-<li><a href="http://jshint.com/docs/options/#typed" target="_blank" rel="external">typed</a><br>这个选项定义全局变量数组类型构造函数。</li>
-<li><a href="http://jshint.com/docs/options/#worker" target="_blank" rel="external">worker</a><br>这个选项定义全局变量可以当你的代码运行在web worker.web worker 是运行在后台的 JavaScript，独立于其他脚本，不会影响页面的性能.<br><strong>所有主流浏览器均支持 web worker，除了 Internet Explorer。</strong></li>
-<li><a href="http://jshint.com/docs/options/#wsh" target="_blank" rel="external">wsh</a><br>这个选项定义全局变量可以当你的代码运行在Windows Script Host的运行时环境</li>
-<li><a href="http://jshint.com/docs/options/#yui" target="_blank" rel="external">yui</a><br>这个选项定义全局暴露的yui框架。</li>
-</ul>
-
+<p>由此可见JSHint是一个javascript代码分析检测工具，不仅可以帮助我们检测到js代码错误和潜在问题，也能帮助我们规范代码开发。<br>
       
     </div>
     
@@ -934,66 +447,9 @@ text = &quot;Hello\World&quot;; // Warning, there is a space after \
       
 
       
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-
-
-  
-    <article id="post-hello-world" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a href="/blog/2016/01/21/hello-world/" class="article-date">
-  	<time datetime="2016-01-21T09:36:09.425Z" itemprop="datePublished">2016-01-21</time>
-</a>
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/blog/2016/01/21/hello-world/">Hello World</a>
-    </h1>
-  
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="external">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="external">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="external">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="external">GitHub</a>.</p>
-<h2 id="Quick_Start"><a href="#Quick_Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create_a_new_post"><a href="#Create_a_new_post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="external">Writing</a></p>
-<h3 id="Run_server"><a href="#Run_server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="external">Server</a></p>
-<h3 id="Generate_static_files"><a href="#Generate_static_files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="external">Generating</a></p>
-<h3 id="Deploy_to_remote_sites"><a href="#Deploy_to_remote_sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="external">Deployment</a></p>
-
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-      
-
+        <p class="article-more-link">
+          <a  href="/blog/2016/01/25/JSHint/#more">more >></a>
+        </p>
       
       <div class="clearfix"></div>
     </div>
